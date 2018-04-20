@@ -101,19 +101,8 @@ of `drupal/core` (recommended).
 ## Custom command
 
 The plugin by default is only downloading the scaffold files when installing or
-updating `drupal/core`. If you want to call it manually, you have to add the
-command callback to the `scripts`-section of your root `composer.json`, like this:
-
-```json
-{
-  "scripts": {
-    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-  }
-}
-```
-
-After that you can manually download the scaffold files according to your
-configuration by using `composer drupal-scaffold`.
+updating `drupal/core`. If you want to call it manually, you have to run
+`composer drupal:scaffold`.
 
 It is assumed that the scaffold files will be committed to the repository, to
 ensure that the correct files are used on the CI server (see **Limitation**,
